@@ -1,0 +1,58 @@
+﻿<Page x:Class="Hospital_System_2._0.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hospital_System_2._0"
+      mc:Ignorable="d" 
+      Loaded="Page_Loaded"
+      d:DesignHeight="450" d:DesignWidth="650"
+      Title="Page2">
+
+    <Grid>
+        <StackPanel Margin ="90 53 0 0" Width ="600" Height="95" VerticalAlignment="Top" Background="#FFE4E4E4" >
+            <TextBlock Width ="140" FontSize="14" HorizontalAlignment="Left" Margin ="10 4 0 0"  >
+                Identification Number
+            </TextBlock>
+            <TextBox HorizontalAlignment="Left" FontSize="14"  Width ="250" TextChanged="Text_Changed1" 
+                     Margin ="10 0 0 0" Padding="2" Name="ID"/>
+            <Button Name="checkbalance" Click="ShowPreviousBalance" HorizontalAlignment="Left" 
+                    Margin ="10 4 0 0" FontSize="15" Width ="150" Height="35" >
+                Check last Balance
+            </Button>
+        </StackPanel>
+        <StackPanel Margin ="370 53 0 0" Width ="600" >
+            <TextBlock Margin ="0 4 0 0" FontSize="14" HorizontalAlignment="Left" >
+                Amount to Add
+            </TextBlock>
+            <TextBox TextChanged="Text_Changed2" Name ="Amount" Padding="2" 
+                     HorizontalAlignment="Left" FontSize="14"  Width ="250"  
+                     Margin ="0 0 0 0" />
+            <Button HorizontalAlignment="Left" Margin ="0 4 0 0" FontSize="15" Width ="135" Height="35" 
+                    Name="addAmount" Click="AddAmountToDB">
+                Add this Amount
+            </Button>
+        </StackPanel>
+        <StackPanel Margin ="90 82 0 0" HorizontalAlignment="Left" Width ="560" >
+            <TextBlock Margin ="10 90 0 0" HorizontalAlignment="Left" Name="HeaderPurchase" FontSize="22" FontWeight="DemiBold" >
+                DETAILS
+            </TextBlock>
+            <StackPanel Margin ="10 5 0 0" Width ="250" Height="1" HorizontalAlignment="Left" Background="#FF5D5D5D" ></StackPanel>
+            <TextBlock Margin ="10 15 0 0" HorizontalAlignment="Left" x:Name="PatientName" FontSize="16" >
+                NAME :
+            </TextBlock>
+            <TextBlock Margin ="10 5 0 0" HorizontalAlignment="Left" Name="PatientID" FontSize="16" >
+                ID :
+            </TextBlock>
+            <TextBlock Margin ="10 5 0 0" HorizontalAlignment="Left" Name="Balance" FontSize="16" >
+                LAST BALANCE :
+            </TextBlock>
+            <TextBlock Margin ="10 5 0 0" HorizontalAlignment="Left" Name="AmtNow" FontSize="16" >
+                TODAYS PURCHASE :
+            </TextBlock>
+            <TextBlock Margin ="10 10 0 0" HorizontalAlignment="Left" Name="PatientTotal" FontSize="18" FontWeight="DemiBold" >
+                TOTAL :
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
